@@ -1,0 +1,139 @@
+---
+import Header from "@/components/Header.astro";
+import Section from "@/components/Section.astro";
+import Card from "@/components/Card.astro";
+import Technologies from "@/components/Technologies.astro";
+
+import projects from "@/data/index.json";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body class="dark:bg-black dark:text-white">
+    <main class="mx-auto max-w-screen-lg p-4">
+      <article class="grid h-screen place-content-center">
+        <h1
+          class="mx-auto w-[8ch] animate-[typing_2s_steps(12),blink_.6s_infinite_step-end_alternate,waves_12s_linear_infinite] overflow-hidden border-r-4 dark:border-white bg-gradient-circle bg-clip-text text-5xl font-black text-transparent md:text-7xl lg:text-9xl"
+        >
+          ALAN.DEV
+        </h1>
+        <section class="my-4">
+          <p class="mb-2 text-center">
+            Hola!!! soy <em class="font-bold">Alan Mayorga</em>
+             desarrollador con +2 años de experiencia, principalmente enfocada
+            en el desarrollo web.
+          </p>
+          <p class="text-center">
+            Te invito a conocer más sobre mí, solo sigue haciendo scroll 😉 !!!
+          </p>
+          <section class="flex justify-center gap-3 p-3">
+            <a
+              href="https://github.com/AlanMayorga"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-brand-github"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/alan-mayorga/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 50 50"
+                fill="currentColor"
+              >
+                <path
+                  d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"
+                ></path>
+              </svg>
+            </a>
+            <a href="http://" target="_blank" rel="noopener noreferrer"></a>
+          </section>
+        </section>
+      </article>
+      <Technologies />
+      <Header />
+      <article class="p-4">
+        <Section
+          id="about"
+          title="Acerca de mi"
+          content={[
+            "+2 años de experiencia como Front End Developer donde también he cumplido con la función de Full Stack Developer. Siempre me aseguro de utilizar las mejores prácticas de desarrollo para cumplir con los objetivos esperados del proyecto, y así garantizar la satisfacción del cliente. Estoy dedicado a la mejora continua de mi habilidad y conocimiento en el desarrollo de software para crear soluciones innovadoras y eficientes.",
+            "Me gusta escuchar musica y hacer deporte, ademas de comer mucho (hamburgesas 😋), y de vez en cuando viajar y conocer lugares nuevos.",
+          ]}
+        />
+        <Section id="proyects" title="Proyectos">
+          <div class="grid grid-cols-2 gap-3">
+            {
+              projects.map(({ title, description, github, img, site }) => (
+                <Card
+                  title={title}
+                  description={description}
+                  github={github}
+                  site={site}
+                  img={img}
+                />
+              ))
+            }
+          </div>
+        </Section>
+      </article>
+    </main>
+    <footer class="mx-auto my-0 max-w-screen-md p-3">
+      <section class="text-center text-xs">
+        Mi inspiración: <a
+          href="http://midu.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-blue-500">midudev</a
+        > 💜
+      </section>
+    </footer>
+  </body>
+</html>
+
+<style>
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  @keyframes waves {
+    50% {
+      background-position: 9rem 4rem;
+    }
+  }
+</style>

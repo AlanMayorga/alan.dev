@@ -1,0 +1,16 @@
+[
+    {
+        "title": "JS-QUIZ",
+        "description": "Es una aplicación web diseñada para poner a prueba los conocimientos de los usuarios sobre JavaScript, uno de los lenguajes de programación más populares y versátiles.",
+        "github": "js-quiz",
+        "site": "https://alanmayorga.github.io/js-quiz/",
+        "img": "js-quiz.png"
+    },
+    {
+        "title": "Gato #",
+        "description": " El juego de \"Gato\" es una implementación en línea del clásico juego de Tres en Raya. Este proyecto ofrece una plataforma interactiva y divertida para que los usuarios jueguen entre sí.",
+        "github": "gato",
+        "site": "https://alanmayorga.github.io/gato/",
+        "img": "gato.png"
+    }
+]
