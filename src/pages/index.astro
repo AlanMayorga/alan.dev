@@ -3,8 +3,9 @@ import Header from "@/components/Header.astro";
 import Section from "@/components/Section.astro";
 import Card from "@/components/Card.astro";
 import Technologies from "@/components/Technologies.astro";
+import Experience from "@/components/Experience.astro";
 
-import projects from "@/data/index.json";
+import { projects, experience } from "@/data";
 ---
 
 <html lang="es">
@@ -19,7 +20,7 @@ import projects from "@/data/index.json";
     <main class="mx-auto max-w-screen-lg p-4">
       <article class="grid h-screen place-content-center">
         <h1
-          class="mx-auto w-[8ch] animate-[typing_2s_steps(12),blink_.6s_infinite_step-end_alternate,waves_12s_linear_infinite] overflow-hidden border-r-4 dark:border-white bg-gradient-circle bg-clip-text text-5xl font-black text-transparent md:text-7xl lg:text-9xl"
+          class="mx-auto w-[8ch] animate-[typing_2s_steps(12),blink_.6s_infinite_step-end_alternate,waves_12s_linear_infinite] overflow-hidden border-r-4 bg-gradient-circle bg-clip-text text-5xl font-black text-transparent dark:border-white md:text-7xl lg:text-9xl"
         >
           ALAN.DEV
         </h1>
@@ -88,6 +89,15 @@ import projects from "@/data/index.json";
             "Me gusta escuchar musica y hacer deporte, ademas de comer mucho (hamburgesas 😋), y de vez en cuando viajar y conocer lugares nuevos.",
           ]}
         />
+        <Section id="experience" title="Experiencia">
+          <article class="mb-4">
+            {
+              experience.map(({ title, date, responsibilities, achievements }) => (
+                <Experience title={title} date={date}, responsibilitis={responsibilities} achievements={achievements} />
+              ))
+            }
+          </article>
+        </Section>
         <Section id="proyects" title="Proyectos">
           <div class="grid grid-cols-2 gap-3">
             {

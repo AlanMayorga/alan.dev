@@ -1,0 +1,61 @@
+---
+export interface Props {
+  title: string;
+  date: string;
+  responsibilitis: Array<string>;
+  achievements: Array<string>;
+}
+
+const { title, date, responsibilitis, achievements } = Astro.props;
+---
+
+<div class="flex">
+  <div class="flex w-1/12 flex-col items-center">
+    <div class="h-1/2 w-[2px] bg-custom-purple"></div>
+    <div class="py-1 text-custom-purple">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-circle-dashed"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M8.56 3.69a9 9 0 0 0 -2.92 1.95"></path>
+        <path d="M3.69 8.56a9 9 0 0 0 -.69 3.44"></path>
+        <path d="M3.69 15.44a9 9 0 0 0 1.95 2.92"></path>
+        <path d="M8.56 20.31a9 9 0 0 0 3.44 .69"></path>
+        <path d="M15.44 20.31a9 9 0 0 0 2.92 -1.95"></path>
+        <path d="M20.31 15.44a9 9 0 0 0 .69 -3.44"></path>
+        <path d="M20.31 8.56a9 9 0 0 0 -1.95 -2.92"></path>
+        <path d="M15.44 3.69a9 9 0 0 0 -3.44 -.69"></path>
+      </svg>
+    </div>
+    <div class="h-1/2 w-[2px] bg-custom-purple"></div>
+  </div>
+  <div class="mb-2 w-11/12 dark:text-gray-300">
+    <h4 class="text-lg font-medium text-secondary">
+      {title}
+    </h4>
+    <h5 class="mb-2 text-sm font-medium">
+      {date}
+    </h5>
+    <div>
+      <h6 class="font-medium">RESPONSABILIDADES</h6>
+      <ul class="list-disc pl-10">
+        {responsibilitis.map((responsibility) => <li>{responsibility}</li>)}
+      </ul>
+    </div>
+    <div>
+      <h6 class="font-medium">LOGROS CLAVE</h6>
+      <ul class="list-disc pl-10">
+        {achievements.map((achievement) => <li>{achievement}</li>)}
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Full Stack Developer en IDS Comercial",
+    "date": "Julio 2022 - Presente",
+    "responsibilities": [
+      "Desarrollar sistemas a medida para cumplir las necesidades de los clientes.",
+      "Trabajar en varios proyectos de diversos clientes.",
+      "Comunicación directa con los equipos de desarrollo de los clientes para el desarrollo en conjunto de los requerimientos."
+    ],
+    "achievements": [
+      "Creación de sistemas utilizando las mejores prácticas y estándares especificados por los clientes para el desarrollo y cumplimiento de los requerimientos.",
+      "Mejoras y medición de rendimiento a sistemas creados por los clientes."
+    ]
+  },
+  {
+    "title": "Front End Developer en Corebiz México",
+    "date": "Mayo 2021 - Junio 2022 · [E-Commerce]",
+    "responsibilities": [
+      "Implementar diseños en las páginas de e-commerce de los clientes.",
+      "Trabajar en varios proyectos de diversos clientes.",
+      "omunicación directa con los equipos de desarrollo de los clientes para la implementación de requerimientos específicos."
+    ],
+    "achievements": [
+      "Creación de componentes customizados a la medida para cubrir necesidades específicas de los clientes.",
+      "Mejora en la experiencia del usuario en el proceso de sus compras dentro la página.",
+      "Creación de proyectos para implementar funcionalidades específicas en el proceso de pago (checkout)."
+    ]
+  },
+  {
+    "title": "Full Stack Developer en T-Systems",
+    "date": "Enero 2021 - Abril 2021",
+    "responsibilities": [
+      "Utilizar los diseños ya implementados para el nuevo módulo.",
+      "Apoyar al equipo en el desarrollo de sus módulos.",
+      "Entregas semanales de avances funcionales del proyecto."
+    ],
+    "achievements": [
+      "Implementación del nuevo módulo desarrollado. Entrega en tiempo del producto.",
+      "Mejoras en el diseño y en la experiencia de usuario."
+    ]
+  }
+]
