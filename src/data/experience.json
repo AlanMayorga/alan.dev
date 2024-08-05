@@ -1,7 +1,7 @@
 [
   {
     "title": "Full Stack Developer en IDS Comercial",
-    "date": "Julio 2022 - Presente",
+    "date": "Julio 2022 - Mayo 2024",
     "responsibilities": [
       "Desarrollar sistemas a medida para cumplir las necesidades de los clientes.",
       "Trabajar en varios proyectos de diversos clientes.",
@@ -9,7 +9,8 @@
     ],
     "achievements": [
       "Creación de sistemas utilizando las mejores prácticas y estándares especificados por los clientes para el desarrollo y cumplimiento de los requerimientos.",
-      "Mejoras y medición de rendimiento a sistemas creados por los clientes."
+      "Mejoras y medición de rendimiento a sistemas creados por los clientes.",
+      "Inicialización y configuración de nuevos proyectos, implementando las herramientas y tecnologías más adecuadas para el proyecto."
     ]
   },
   {
@@ -18,11 +19,11 @@
     "responsibilities": [
       "Implementar diseños en las páginas de e-commerce de los clientes.",
       "Trabajar en varios proyectos de diversos clientes.",
-      "omunicación directa con los equipos de desarrollo de los clientes para la implementación de requerimientos específicos."
+      "Comunicación directa con los equipos de desarrollo de los clientes para la implementación de requerimientos específicos."
     ],
     "achievements": [
-      "Creación de componentes customizados a la medida para cubrir necesidades específicas de los clientes.",
-      "Mejora en la experiencia del usuario en el proceso de sus compras dentro la página.",
+      "Desarrollo continuo a las aplicaciones e-commerce de los clientes (Sally Beauty, Walmart, Aldo Conti, La gran bodega, entre otros), mejorando la experiencia del usuario en el proceso de sus compras, utilizando como principal herramienta Vtex IO. Se basa principalmente en escribir JSON para crear componentes preestablecidos. Los estilos se generaban a través de SASS y con clases ya definidas para cada componente.",
+      "Desarrollo de componentes customizados a la medida para cubrir necesidades específicas de los clientes, utilizando React como tecnología se crean componentes utilizando las APIs de VTEX para la consulta de información relacionada a la tienda tales como información de lista de productos o productos en específico, también brinda un catálogo de componentes para utilizarlos y adecuarlos a los requerimientos solicitados.",
       "Creación de proyectos para implementar funcionalidades específicas en el proceso de pago (checkout)."
     ]
   },
@@ -35,8 +36,8 @@
       "Entregas semanales de avances funcionales del proyecto."
     ],
     "achievements": [
-      "Implementación del nuevo módulo desarrollado. Entrega en tiempo del producto.",
-      "Mejoras en el diseño y en la experiencia de usuario."
+      "Desarrollé un módulo complementario de una aplicación web para la gestión de recursos de diferentes empresas. Se utilizó .NET como framework de desarrollo, se consultaban los usuarios registrados por medio de Active Directory de Windows por medio de LDAP y se desplego la información en una tabla dinámica con la que contaba con paginación utilizando Bootstrap. Se consultaban las ventas, declinaciones, entre otra información para mostrarlas en tarjetas y posteriormente al darle clic se mostraba toda la información completa consultada con AJAX a la API REST, dicha información se mostraba en graficas dinámicas utilizando la librería de JavaScript Chart.j.s. Se creo un botón para descargar la información en formato PDF, esto lo generaba el servidor con C#.",
+      "Para la persistencia de datos se utilizó SQL Server con el Entity Framework Core para hacer consultas, guardar, editar y eliminar registros (CRUD)."
     ]
   }
 ]

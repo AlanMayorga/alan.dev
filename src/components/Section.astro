@@ -1,18 +1,20 @@
 ---
 export interface Props {
-    id: string
-    title: string
-    content?: string[]
+  id: string;
+  title: string;
+  content?: string[];
+  class?: string;
 }
 
-const { id, title, content } = Astro.props
-
+const { id, title, content, class: className } = Astro.props;
 ---
 
-<section id={id}>
-    <h1 class="text-3xl font-semibold mb-3">{title}</h1>
-    {
-        content?.map((text) => <p class="mb-2 dark:text-gray-300">{text}</p>)
-    }
-    <slot />
+<section id={id} class=`mt-24 scroll-m-20 ${className}`>
+  <h1 class="mb-3 text-3xl font-semibold">{title}</h1>
+  {
+    content?.map((text) => (
+      <p class="text-pretty mb-2 dark:text-gray-300">{text}</p>
+    ))
+  }
+  <slot />
 </section>
