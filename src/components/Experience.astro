@@ -1,17 +1,18 @@
 ---
 export interface Props {
   title: string;
+  company: string;
   date: string;
   responsibilitis: Array<string>;
   achievements: Array<string>;
 }
 
-const { title, date, responsibilitis, achievements } = Astro.props;
+const { title, company, date, responsibilitis, achievements } = Astro.props;
 ---
 
 <div class="flex">
   <div class="flex w-1/12 flex-col items-center">
-    <div class="py-1 text-custom-purple">
+    <div class="py-1 text-secondary">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="icon icon-tabler icon-tabler-circle-dashed"
@@ -35,13 +36,16 @@ const { title, date, responsibilitis, achievements } = Astro.props;
         <path d="M15.44 3.69a9 9 0 0 0 -3.44 -.69"></path>
       </svg>
     </div>
-    <div class="h-full w-[2px] bg-custom-purple"></div>
+    <div class="h-full w-[1.5px] bg-neutral-200 dark:bg-neutral-600/60"></div>
   </div>
-  <div class="mb-2 w-11/12 dark:text-gray-300">
-    <h4 class="text-lg font-medium text-secondary">
+  <div class="mb-10 w-11/12 text-gray-600 dark:text-gray-300">
+    <h3 class="text-xl font-bold text-secondary">
       {title}
+    </h3>
+    <h4 class="text-xl font-semibold dark:text-white">
+      {company}
     </h4>
-    <h5 class="mb-2 text-sm font-medium">
+    <h5 class="mb-6 text-sm font-medium">
       {date}
     </h5>
     <div>

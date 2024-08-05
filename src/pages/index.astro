@@ -1,4 +1,6 @@
 ---
+import '@fontsource-variable/onest'
+
 import Header from "@/components/Header.astro";
 import Section from "@/components/Section.astro";
 import Card from "@/components/Card.astro";
@@ -7,6 +9,9 @@ import Experience from "@/components/Experience.astro";
 import SocialPill from '@/components/SocialPill.astro'
 import GitHub from '@/components/icons/GitHub.astro'
 import LinkedIn from '@/components/icons/LinkedIn.astro'
+import BriefCaseIcon from '@/components/icons/BriefCaseIcon.astro'
+import UserStarIcon from '@/components/icons/UserStarIcon.astro'
+import CodeIcon from '@/components/icons/CodeIcon.astro'
 
 import { projects, experience } from "@/data";
 ---
@@ -20,17 +25,18 @@ import { projects, experience } from "@/data";
     <title>Alan Mayorga - Programador y Desarrollador Web</title>
     <meta name="description" content="Contrata a Alan Mayorga para crear aplicaciones web o moviles. Especializado en crear aplicaciones a la medida." />
   </head>
-  <body class="dark:bg-neutral-950 dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] dark:text-white">
+  <body class="dark:text-white">
+    <div class="fixed inset-0 -z-10 h-full w-full bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)] dark:bg-neutral-950 dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
     <Header />
     <main class="mx-auto max-w-3xl p-4">
-      <article class="grid h-screen place-content-center">
+      <article class="h-screen flex items-center flex-col justify-center">
         <h1
           class="mx-auto w-[9ch] animate-[typing_2s_steps(12),blink_.6s_infinite_step-end_alternate,waves_12s_linear_infinite] overflow-hidden border-r-4 bg-gradient-circle bg-clip-text font-black text-transparent dark:border-white text-7xl sm:text-8xl md:text-9xl"
         >
           ALAN.DEV
         </h1>
         <section class="my-4">
-          <p class="mb-2 text-center text-xl sm:text-2xl md:text-4xl">
+          <p class="mb-2 text-center text-2xl sm:text-3xl md:text-4xl">
             Soy <em class="font-bold">Alan Mayorga</em>. Ingeniero TI con +3 años de experiencia, principalmente enfocada
             en el desarrollo web.
           </p>
@@ -53,15 +59,17 @@ import { projects, experience } from "@/data";
       </article>
       <Technologies />
         <Section id="experience" title="Experiencia" class="mt-0">
+          <BriefCaseIcon slot="icon" class="size-9" />
           <article class="mb-4">
             {
-              experience.map(({ title, date, responsibilities, achievements }) => (
-                <Experience title={title} date={date}, responsibilitis={responsibilities} achievements={achievements} />
+              experience.map(({ title, company, date, responsibilities, achievements }) => (
+                <Experience title={title} company={company}  date={date}, responsibilitis={responsibilities} achievements={achievements} />
               ))
             }
           </article>
         </Section>
         <Section id="proyects" title="Proyectos">
+          <CodeIcon slot="icon" class="size-9" />
           <div class="grid grid-cols-2 gap-3">
             {
               projects.map(({ title, description, github, img, site }) => (
@@ -83,7 +91,9 @@ import { projects, experience } from "@/data";
             "+3 años de experiencia como Front End Developer donde también he cumplido con la función de Full Stack Developer. Siempre me aseguro de utilizar las mejores prácticas de desarrollo para cumplir con los objetivos esperados del proyecto, y así garantizar la satisfacción del cliente. Estoy dedicado a la mejora continua de mi habilidad y conocimiento en el desarrollo de software para crear soluciones innovadoras y eficientes.",
             "Me gusta escuchar musica y hacer deporte, ademas de comer mucho (hamburgesas 😋), y de vez en cuando viajar y conocer lugares nuevos.",
           ]}
-        />
+      >
+      <UserStarIcon slot="icon" class="size-9" />
+    </Section>
     </main>
     <footer class="mx-auto my-0 max-w-screen-md p-3">
       <section class="text-center text-xs">
@@ -100,6 +110,7 @@ import { projects, experience } from "@/data";
 
 <style>
   html {
+    font-family: 'Onest Variable', sans-serif;
     scroll-behavior: smooth;
   }
 

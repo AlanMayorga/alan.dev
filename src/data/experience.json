@@ -1,6 +1,7 @@
 [
   {
-    "title": "Full Stack Developer en IDS Comercial",
+    "title": "Full Stack Developer",
+    "company": "IDS Comercial",
     "date": "Julio 2022 - Mayo 2024",
     "responsibilities": [
       "Desarrollar sistemas a medida para cumplir las necesidades de los clientes.",
@@ -14,7 +15,8 @@
     ]
   },
   {
-    "title": "Front End Developer en Corebiz México",
+    "title": "Front End Developer",
+    "company": "Corebiz México",
     "date": "Mayo 2021 - Junio 2022 · [E-Commerce]",
     "responsibilities": [
       "Implementar diseños en las páginas de e-commerce de los clientes.",
@@ -28,7 +30,8 @@
     ]
   },
   {
-    "title": "Full Stack Developer en T-Systems",
+    "title": "Full Stack Developer",
+    "company": "T-Systems México",
     "date": "Enero 2021 - Abril 2021",
     "responsibilities": [
       "Utilizar los diseños ya implementados para el nuevo módulo.",
