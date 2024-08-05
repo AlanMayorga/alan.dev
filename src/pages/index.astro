@@ -31,7 +31,7 @@ import { projects, experience } from "@/data";
     <main class="mx-auto max-w-3xl p-4">
       <article class="h-screen flex items-center flex-col justify-center">
         <h1
-          class="mx-auto w-[9ch] animate-[typing_2s_steps(12),blink_.6s_infinite_step-end_alternate,waves_12s_linear_infinite] overflow-hidden border-r-4 bg-gradient-circle bg-clip-text font-black text-transparent dark:border-white text-7xl sm:text-8xl md:text-9xl"
+          class="typing-text bg-gradient-circle bg-clip-text font-black text-transparent border-r-4 text-6xl sm:text-8xl md:text-9xl dark:border-white overflow-hidden whitespace-nowrap"
         >
           ALAN.DEV
         </h1>
@@ -112,6 +112,11 @@ import { projects, experience } from "@/data";
   html {
     font-family: 'Onest Variable', sans-serif;
     scroll-behavior: smooth;
+  }
+
+  .typing-text {
+    width: 8ch;
+    animation: typing 2s steps(8), blink .6s infinite step-end alternate, waves 12s linear infinite;
   }
 
   @media (prefers-reduced-motion: reduce) {
